@@ -1,0 +1,17 @@
+/*
+C++
+Time spent: 2 min 
+Score: 100%
+*/
+int solution(vector<int> &A) {
+    long long toEast = 0;
+    long long count = 0; // *
+    for(int i=0;i<A.size();i++) {
+        if(A[i] == 0) {
+            toEast++;
+        } else {
+            count += toEast;
+        }
+    }
+    return count > 1000000000 ? -1 : count; // *
+}
