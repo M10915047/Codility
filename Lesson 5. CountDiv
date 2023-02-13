@@ -1,0 +1,13 @@
+/*
+C++
+Time spent: 1 min 
+Score: 100%
+*/
+int solution(int A, int B, int K) {
+    if( A % K == 0 ) {
+        return (B-A)/K + 1;
+    }
+    else {
+        return (B-(A-A%K))/K; // 將餘數拿掉可將時間複雜度由14分鐘提高至1分鐘，但不影響分數
+    }
+}
